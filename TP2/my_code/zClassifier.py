@@ -184,7 +184,7 @@ def test(D):
             
     for key in classifier_dict:
         myclassifier = classifier_dict[key]
-        acc = compute_accuracy(myclassifier, D, key) # Replace by a call to ClfScatter
+        acc = D.ClfScatter(myclassifier) # Replace by a call to ClfScatter
               
     return acc # Return the last accuracy (important to get the correct answer in the TP)
     
