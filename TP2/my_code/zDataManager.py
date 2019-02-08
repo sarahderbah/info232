@@ -119,12 +119,12 @@ class DataManager(data_manager.DataManager):
     def DataStats(self, set_name):
     	''' Display simple data statistics.'''
     	DF = self.toDF(set_name)
-    	return DF.describe()  # Return something better
+    	return DF.describe() # Return something better
     	
     def DataHist(self, set_name):
         ''' Show histograms.'''
         DF = self.toDF(set_name)
-        return DF.hist(figsize=(10, 10), bins=50, layout=(3, 2)); # Return something better
+        return DF.hist(figsize=(10, 10), bins=50, layout=(3, 2)) # Return something better
     
     def ShowScatter(self, set_name):
         ''' Show scatter plots.'''
@@ -132,7 +132,7 @@ class DataManager(data_manager.DataManager):
         if set_name == 'train':
         	return sns.pairplot(DF, hue="target") # Return something better
         else:
-        	return sns.pairplot(data) # Return something better
+        	return sns.pairplot(data)  # Return something better
 
     def ShowSomethingElse(self):
         ''' Surprise me.'''
